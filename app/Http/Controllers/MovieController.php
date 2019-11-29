@@ -10,11 +10,17 @@ class MovieController extends Controller
     {
         $movie=\DB::table('movies')->where('slug', $slug)->first();
         // if (! array_key_exists($movie, $movies)){
-        //     abort(404,"Sorry this page doesn't exsist.");
+        // abort(404,"Sorry this page doesn't exsist.");
         // }
 
-        return view('welcome',[movie=>$movie]);
+        return view('movie', ['movie' => $movie]);
         
+    }
+    public function Index()
+    {
+        $movies=\DB::table('movies')->get();
+        return view('index', ['movies' => $movies]);
     }
     
 }
+
