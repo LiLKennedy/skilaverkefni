@@ -21,6 +21,9 @@ class MovieController extends Controller
         $movies=\DB::table('movies')->get();
         return view('index', ['movies' => $movies]);
     }
-    
+    public function Create()
+    {
+        return view('create');
+    }
 }
 
