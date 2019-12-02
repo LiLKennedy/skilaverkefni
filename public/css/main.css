@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Solway:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
+:root {
+    --title-text: 255, 181, 59;
+    --body-text: 144, 145, 145;
+
+    --bg: linear-gradient(150deg,#2f2f40 #0e1014, #0e1014);
+    --bg-movie: 41, 43, 47;
+}
+
+html {
+    background: #0e1014;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+#background {
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: var(--bg);
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    font-family: Quicksand, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#addMovie {
+    background-color: rgb(var(--bg-movie));
+    color: rgb(var(--title-text));
+    font-size: 24px;
+    font-family: Solway;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px -5px #000;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+#movies {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0 5rem;
+}
+
+#addMovie:hover {
+    background-color: rgba(var(--bg-movie), 0.75);
+}
+
+.movie {
+    margin: 2rem 1rem;
+    background-color: rgb(var(--bg-movie));
+    width: 315px;
+    height: 500px;
+    box-shadow: 0px 0px 10px -5px #000;
+    border-radius: .25rem;
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.movie .top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    padding-top: 1rem;
+    z-index: 3;
+}
+
+.movie .middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.rating,
+.year {
+    font-size: 20px;
+    border-radius: .25rem;
+    padding: .5rem .75rem;
+}
+
+.year {
+    color: rgb(218, 218, 218);
+    background-color: rgba(39, 39, 39, 0.75);
+}
+
+.good-rating {
+    color: rgb(30, 247, 128);
+    background-color: rgba(39, 39, 39, 0.75);
+}
+
+.average-rating {
+    color: rgb(247, 233, 30);
+    background-color: rgba(39, 39, 39, 0.75);
+}
+
+.bad-rating {
+    color: rgb(255, 23, 23);
+    background-color: rgba(39, 39, 39, 0.75);
+}
+
+.movie .button {
+    font-size: 24px;
+    padding: .5rem .75rem;
+    border-radius: .25rem;
+    border: 2px solid rgb(var(--title-text));
+    background: transparent;
+    color: rgb(var(--title-text));
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .2s, background-color .2s, color .2s;
+}
+
+.movie .button:hover {
+    background: rgb(var(--title-text));
+    color: #4d3612;
+}
+
+.movie:hover .button,
+.movie:hover .movieBackground {
+    opacity: 1;
+}
+
+.movieBackground {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 315px;
+    height: 500px;
+    border-radius: .25rem;
+    opacity: 0;
+    transition: opacity .2s;
+}
