@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             'rating' => 7.3,
             'genre' => 'Action, Horror, Thriller',
             'description' => 'Movie about Elsa',
-            'poster' => 'temp',
+            'poster' => 'frozen-2',
             'release_date' => Carbon\Carbon::now(),
             'slug' => 'frozen-2'
         ]);
@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             'rating' => 7.4,
             'genre' => 'Action, Family, Animated',
             'description' => 'Movie about Elsa',
-            'poster' => 'temp',
+            'poster' => 'die-hard-2',
             'release_date' => Carbon\Carbon::now(),
             'slug' => 'die-hard-2'
         ]);
@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
             'rating' => 6.9,
             'genre' => 'Comedy, Adult, Family',
             'description' => 'Movie about Elsa',
-            'poster' => 'temp',
+            'poster' => 'elf',
             'release_date' => Carbon\Carbon::now(),
             'slug' => 'elf'
         ]);
@@ -45,7 +45,7 @@ class DatabaseSeeder extends Seeder
             'rating' => 6.1,
             'genre' => 'Sci-Fi, Horror, Romance',
             'description' => 'Elsa steals the grinch\'s heart ',
-            'poster' => 'temp',
+            'poster' => 'how-the-grinch-stole-christmas',
             'release_date' => Carbon\Carbon::now(),
             'slug' => 'how-the-grinch-stole-christmas'
         ]);
@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
             'rating' => 6.3,
             'genre' => 'Comedy, Stoner, Romance',
             'description' => 'Elsa steals the grinch\'s heart ',
-            'poster' => 'temp',
+            'poster' => 'a-very-harold-and-kumar-3d-christmas',
             'release_date' => Carbon\Carbon::now(),
             'slug' => 'a-very-harold-and-kumar-3d-christmas'
         ]);
@@ -63,7 +63,7 @@ class DatabaseSeeder extends Seeder
             'rating' => 3.7,
             'genre' => 'Comedy, Documentary, Murder-Mystery',
             'description' => 'Elsa steals the grinch\'s heart ',
-            'poster' => 'temp',
+            'poster' => '12-years-a-slave',
             'release_date' => Carbon\Carbon::now(),
             'slug' => '12-years-a-slave'
         ]);
@@ -72,7 +72,7 @@ class DatabaseSeeder extends Seeder
             'rating' => 8.7,
             'genre' => 'Horror, Documentary, Lovecraftian',
             'description' => 'Elsa steals the grinch\'s heart ',
-            'poster' => 'temp',
+            'poster' => 'evil-bong',
             'release_date' => Carbon\Carbon::now(),
             'slug' => 'evil-bong'
         ]);
