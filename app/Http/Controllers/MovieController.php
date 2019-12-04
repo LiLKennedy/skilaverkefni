@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
 
 class MovieController extends Controller
 {
@@ -26,6 +28,24 @@ class MovieController extends Controller
     public function Create()
     {
         return view('create');
+    }
+    public function Store()
+    {
+
+        $path = request()->file('poster')->store('img');
+        $slug = Str::slug(request('name'), '-');
+        $movie = new Movie();
+
+        $movie->name = request('name');
+        $movie->rating = request('rating');
+        $movie->genre = request('genre');
+        $movie->description = request('description');
+        $movie->poster = $path;
+        $movie->release_date = request('release_date');
+        $movie->slug = $slug;
+
+        $movie->save();
+
     }
 }
 

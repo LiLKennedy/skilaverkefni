@@ -12,7 +12,8 @@
 @section ('content')
     <a href="/" class="goback material-icons">keyboard_backspace</a>
         
-    <form action="" id="create">
+    <form method="POST" action="/" id="create" enctype="multipart/form-data">
+        @csrf
         <div class="header">Add a Movie</div>
         <div id="top">
             <label for="name">Movie Title</label>
@@ -46,5 +47,6 @@
             <label for="movieDescription">Short Text About The Movie</label>
             <textarea id="movieDescription" type="text" name="description"></textarea>
         </div>
+        <button type="submit">Ass n Tiddies</button>
     </form>
 @endsection
