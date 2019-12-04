@@ -13,7 +13,7 @@
     <a href="/" class="goback material-icons">keyboard_backspace</a>
     <div id="movie">
         <div id="left">
-            <img src="../img/{{ $movie->poster }}.jpg" alt="Movie Poster">
+            <img src="../{{ $movie->poster }}" alt="Movie Poster">
         </div>
         <div id="right">
             <div id="info">

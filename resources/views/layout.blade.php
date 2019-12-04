@@ -44,12 +44,14 @@
         </div>
         
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        
         <script>
             var app = new Vue({
                 el: '#app',
                 data() {
                     return {
-                        show: false
+                        show: false,
+                        ratingValue: 0
                     }
                 },
                 mounted () {

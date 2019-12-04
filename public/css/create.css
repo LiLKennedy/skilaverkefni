@@ -19,6 +19,7 @@
   background-color: #292b2f;
   border-radius: 0.25rem;
   padding: 1rem 2.5rem;
+  width: 700px;
 }
 
 #top,
@@ -53,22 +54,58 @@
 #middle #midLeft div,
 #middle #midRight div {
   height: 100%;
+  display: -webkit-box;
+  display: flex;
+  margin-bottom: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
 }
 
 #middle #midLeft {
   margin-right: 1.5rem;
 }
 
-#middle #midLeft div:nth-child(2) {
+#middle #midRight {
+  margin-left: 1.5rem;
+}
+
+#middle #midRight div div {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
           align-items: center;
-  margin-bottom: 10px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  height: 70px;
 }
 
-#middle #midRight {
-  margin-left: 1.5rem;
+#middle #midRight #movieRating {
+  margin-top: 22px;
+  height: 40px;
+  text-align: center;
+  border-left: 1px solid #292b2f;
+  border-right: 1px solid #292b2f;
+  border-top: 2px solid transparent !important;
+  border-bottom: 2px solid transparent !important;
+}
+
+#middle #midRight .btn {
+  height: 40px;
+  border: 2px solid;
+  border-color: transparent;
+  background-color: #1a1c1f;
+  color: #ffb53b;
+  padding: 0.5rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+#middle #midRight .btn:hover {
+  border-color: #ffb53b;
 }
 
 .header {
@@ -88,7 +125,6 @@ textarea {
   margin-bottom: 2rem;
   color: #909191;
   height: 40px;
-  line-height: 1.5;
   margin-top: 10px;
   padding: 0 0.5rem;
   font-size: 1rem;
@@ -98,6 +134,7 @@ textarea {
   outline: none;
   -webkit-transition: border-color 0.2s;
   transition: border-color 0.2s;
+  font-family: Quicksand;
 }
 
 input:hover,
@@ -107,37 +144,44 @@ textarea:focus {
   border-color: #ffb53b;
 }
 
-input[type=file] {
-  display: none;
-}
-
-#posterUpload {
-  text-align: center;
-  font-size: 1rem;
-  width: 100%;
-  margin-top: 8px;
-  background-color: #1a1c1f;
-  box-shadow: 0px 0px 10px -5px #000;
-  border: 2px solid;
-  border-color: transparent;
-  height: 35px;
-  line-height: 2;
-  cursor: pointer;
-  -webkit-transition: border-color 0.2s;
-  transition: border-color 0.2s;
-}
-
-#posterUpload:hover {
-  border-color: #ffb53b;
-}
-
 input[type=date]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   display: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#moviePoster {
+  cursor: pointer;
+}
+
 textarea {
   resize: none;
-  height: 100px;
+  height: 150px;
+}
+
+.submitbutton {
+  font-size: 24px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  border: 2px solid #ffb53b;
+  background: transparent;
+  color: #ffb53b;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.submitbutton:hover {
+  background: #ffb53b;
+  color: #4d3612;
 }
 

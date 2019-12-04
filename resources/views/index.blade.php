@@ -17,7 +17,7 @@
         </div>
         @foreach ($movies as $movie)
         <div class="movie-container">
-            <div class="movie" style="background-image: url('../img/{{ $movie->poster }}.jpg');">
+            <div class="movie" style="background-image: url('../{{ $movie->poster }}');">
                 <div class="top">
                     <div class="year">{{ substr($movie->release_date, 0, -6) }}</div>
 

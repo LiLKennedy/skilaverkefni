@@ -15,6 +15,7 @@
     background-color: $bg-card;
     border-radius: .25rem;
     padding: 1rem 2.5rem;
+    width: 700px;
 }
 
 #top,
@@ -39,21 +40,54 @@
 
         div {
             height: 100%;
+            display: flex;
+            margin-bottom: 10px;
+            flex-direction: column;
         }
     }
 
     #midLeft {
         margin-right: 1.5rem;
-    
-        div:nth-child(2) {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
     }
 
     #midRight {
         margin-left: 1.5rem;
+        
+        div {
+            
+            div {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                height: 70px;
+            }
+        }
+
+        #movieRating {
+            margin-top: 22px;
+            height: 40px;
+            text-align: center;
+            border-left: 1px solid#292b2f;
+            border-right: 1px solid#292b2f;
+            border-top: 2px solid transparent !important;
+            border-bottom: 2px solid transparent !important;
+        }
+
+        .btn {
+            height: 40px;
+            border: 2px solid;
+            border-color:transparent;
+            background-color:#1a1c1f;
+            color:#ffb53b;
+            padding: 0.5rem;
+            cursor: pointer;
+            box-sizing: border-box;
+            transition: border-color .2s;
+
+            &:hover {
+                border-color: #ffb53b;
+            }
+        }
     }
 }
 
@@ -74,7 +108,6 @@ textarea {
     margin-bottom: 2rem;
     color: $body-text;
     height: 40px;
-    line-height: 1.5;
     margin-top: 10px;
     padding: 0 .5rem;
     font-size: 1rem;
@@ -83,31 +116,10 @@ textarea {
     border-color: transparent;
     outline: none;
     transition: border-color .2s;
+    font-family: Quicksand;
 
     &:hover,
     &:focus {
-        border-color: $title-text;
-    }
-}
-
-input[type=file] {
-    display: none;
-}
-
-#posterUpload {
-    text-align: center;
-    font-size: 1rem;
-    width: 100%;
-    margin-top: 8px;
-    background-color: $bg-card-sec;
-    box-shadow: 0px 0px 10px -5px #000;
-    border: 2px solid;
-    border-color: transparent;
-    height: 35px;
-    line-height: 2;
-    cursor: pointer;
-    transition: border-color .2s;
-    &:hover {
         border-color: $title-text;
     }
 }
@@ -117,8 +129,37 @@ input[type=date]::-webkit-inner-spin-button {
     display: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+#moviePoster {
+    cursor: pointer;
+}
 
 textarea {
     resize: none;
-    height: 100px;
+    height: 150px;
+}
+
+.submitbutton {
+    font-size: 24px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    border: 2px solid #ffb53b;
+    background: transparent;
+    color: #ffb53b;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+.submitbutton:hover {
+    background: #ffb53b;
+    color: #4d3612;
 }

@@ -27,26 +27,29 @@
                 </div>
                 <div>
                     <label for="moviePoster" id="posterUpload">Movie Poster</label>  
-                    <input id="moviePoster" type="file" name="poster">
+                    <input id="moviePoster" type="file" name="poster" style="line-height: 2.25;">
                 </div>
             </div>
             <div id="midRight">
                 <div>
-                    <label for="movieRating">Movie Rating</label>
-                    <input id="movieRating" type="number" min="0" value="5" max="10" step="0.1" name="rating">
-                </div>
-                <div>
                     <label for="movieReleasedate">Release Date</label>
                     <input id="movieReleasedate" type="date" name="release_date">
                 </div>
-                
-                
+                <div>
+                    <label for="rating">Movie Rating</label>
+                    <div>
+                        <div class="btn material-icons" @click="ratingValue--">remove</div>
+                        <input id="movieRating" type="number" v-model="ratingValue" min="0" max="10" step="0.1" name="rating">
+                        <div class="btn material-icons" @click="ratingValue++">add</div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
         <div id="bottom">
             <label for="movieDescription">Short Text About The Movie</label>
             <textarea id="movieDescription" type="text" name="description"></textarea>
         </div>
-        <button type="submit">Ass n Tiddies</button>
+        <button type="submit" class="submitbutton">Submit Movie</button>
     </form>
 @endsection
