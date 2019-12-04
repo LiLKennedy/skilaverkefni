@@ -16,11 +16,13 @@ class MovieController extends Controller
         return view('movie', ['movie' => $movie]);
         
     }
+    
     public function Index()
     {
         $movies=\DB::table('movies')->get();
         return view('index', ['movies' => $movies]);
     }
+
     public function Create()
     {
         return view('create');

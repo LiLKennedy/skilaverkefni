@@ -1,0 +1,42 @@
+html {
+    background: #0e1014;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+#background {
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: var(--bg);
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    font-family: Quicksand, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.goback {
+    font-size: 2.5rem;
+    color: rgb(var(--title-text));
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.goback:hover {
+    color: rgba(var(--title-text), .5);
+}
