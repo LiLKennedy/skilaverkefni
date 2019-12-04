@@ -6,7 +6,7 @@
 @endsection
 
 @section ('background')
-    <div id="background" style="background: linear-gradient(rgb(47, 47, 64), rgba(14, 16, 20, 0.9), rgb(14, 16, 20)), url('../img/{{ $movie->poster }}.jpg');"></div>
+    <div id="background" style="background: linear-gradient(150deg, rgba(47, 47, 64, 1), rgba(14, 16, 20, 0.95), rgba(14, 16, 20, 1)), url('../{{ $movie->poster }}');"></div>
 @endsection
 
 @section ('content')

@@ -22,7 +22,7 @@ class MovieController extends Controller
     
     public function Index()
     {
-        $movies=\DB::table('movies')->get();
+        $movies=\DB::table('movies')->orderBy('id', 'desc')->get();
         return view('index', ['movies' => $movies]);
     }
 
