@@ -50,6 +50,29 @@
     }
 }
 
+#addMovieCard {
+    margin: 2rem 1rem;
+    background-color: rgb(var(--bg-card));
+    width: 315px;
+    height: 500px;
+    box-shadow: 0px 0px 10px -5px #000;
+    border-radius: .25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(var(--title-text));
+    font-size: 3rem;
+    text-decoration: none;
+    border: 1px solid;
+    border-color: transparent;
+    transition: all .2s;
+}
+
+#addMovieCard:hover {
+    border-color: rgb(var(--title-text));
+    box-shadow: 0px 0px 25px -10px rgb(var(--title-text));
+}
+
 .movie {
     margin: 2rem 1rem;
     background-color: rgb(var(--bg-card));
@@ -95,7 +118,7 @@
     font-size: 20px;
     border-radius: .25rem;
     padding: .5rem .75rem;
-    background-color: rgba(var(--bg-card), 0.75);
+    background-color: rgba(var(--bg-card-sec), 0.75);
     font-family: Solway;
 }
 

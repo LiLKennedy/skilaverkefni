@@ -10,10 +10,11 @@
 @endsection
 
 @section ('content')
-    <a href="movies/create" id="addMovie">ADD MOVIE</a>
-    
-    
     <div id="movies">
+        <div class="movie-container">
+            <a href="movies/create" id="addMovieCard" class="material-icons">add_circle_outline <div class="tooltip">ADD A MOVIE</div></a>
+            
+        </div>
         @foreach ($movies as $movie)
         <div class="movie-container">
             <div class="movie" style="background-image: url('../img/{{ $movie->poster }}.jpg');">
