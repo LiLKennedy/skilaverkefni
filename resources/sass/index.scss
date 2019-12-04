@@ -1,0 +1,181 @@
+@import "./colours.scss";
+
+#addMovie {
+    background-color: $bg-card;
+    color: $title-text;
+    font-size: 24px;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px -5px #000;
+    cursor: pointer;
+    transition: background-color .2s;
+    text-decoration: none;
+
+    &:hover {
+        background-color: rgba($bg-card, 0.75);
+    }
+}
+
+#movies {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0 5rem;
+}
+
+.movie-container {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1500px) {
+    .movie-container {
+        width: 33.33%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .movie-container {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .movie-container {
+        width: 100%;
+    }
+}
+
+#addMovieCard {
+    margin: 2rem 1rem;
+    background-color: $bg-card;
+    width: 315px;
+    height: 500px;
+    box-shadow: 0px 0px 10px -5px #000;
+    border-radius: .25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $title-text;
+    font-size: 3rem;
+    text-decoration: none;
+    border: 1px solid;
+    border-color: transparent;
+    transition: all .2s;
+    &:hover {
+        border-color: $title-text;
+        box-shadow: 0px 0px 25px -10px $title-text;
+    
+    }
+}
+
+.movie {
+    margin: 2rem 1rem;
+    background-color: $bg-card;
+    width: 315px;
+    height: 500px;
+    box-shadow: 0px 0px 10px -5px #000;
+    border-radius: .25rem;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        padding-top: 1rem;
+        z-index: 3;
+    }
+
+    .middle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+        padding-bottom: 1rem;
+    }
+
+    .button {
+        font-size: 24px;
+        padding: .5rem .75rem;
+        border-radius: .25rem;
+        border: 2px solid $title-text;
+        background: transparent;
+        color: $title-text;
+        opacity: 0;
+        cursor: pointer;
+        transition: opacity .2s, background-color .2s, color .2s;
+        text-decoration: none;
+        &:hover {
+            background: $title-text;
+            color: #4d3612;
+        }
+    }
+    &:hover {
+        .button, 
+        .movieBackground, 
+        .title {
+            opacity: 1;
+        }
+    }
+}
+
+.rating,
+.year {
+    font-size: 20px;
+    border-radius: .25rem;
+    padding: .5rem .75rem;
+    background-color: rgba($bg-card-sec, 0.75);
+    font-family: Solway;
+}
+
+.year {
+    color: $title-text;
+}
+
+.good-rating {
+    color: rgb(30, 247, 128);
+}
+
+.average-rating {
+    color: rgb(247, 233, 30);
+}
+
+.bad-rating {
+    color: rgb(255, 23, 23);
+}
+
+.title {
+    color: $title-text;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.movieBackground {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba($title-text, 0.25));
+    position: absolute;
+    width: 315px;
+    height: 500px;
+    border-radius: .25rem;
+    opacity: 0;
+    transition: opacity .2s;
+}

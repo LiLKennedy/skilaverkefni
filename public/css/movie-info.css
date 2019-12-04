@@ -1,120 +1,139 @@
 #background {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
 }
 
 #content {
-    position: absolute;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-#left img {
-    width: 100%;
+  position: absolute;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 #movie {
-    display: flex;
-    flex-direction: row;
-    background: rgb(var(--bg-card));
-    line-height: 0;
-    max-width: 1200px;
-    border-radius: .25rem;
-    overflow: hidden;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  background: #292b2f;
+  line-height: 0;
+  max-width: 1200px;
+  border-radius: 0.25rem;
+  overflow: hidden;
 }
 
 #left {
-    width: 50%;
+  width: 50%;
+}
+
+#left img {
+  width: 100%;
 }
 
 #right {
-    line-height: normal;
-    width: 100%;
+  line-height: normal;
+  width: 100%;
 }
 
 #info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: rgb(var(--body-text));
-    padding: 2rem;
-    height: 100%;
-    box-sizing: border-box;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  color: #909191;
+  padding: 2rem;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 #bottom {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 
 #top div:nth-child(2) {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 .25rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  padding: 0 0.25rem;
 }
 
 .name {
-    color: rgb(var(--title-text));
-    font-size: 28px;
-    font-family: Quicksand;
-    font-weight: bold;
-    margin-bottom: 1rem;
+  color: #ffb53b;
+  font-size: 28px;
+  font-family: Quicksand;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .rating {
-    background: rgba(0, 0, 0, 0.25);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    padding: 10px;
-    font-size: 18px;
-    font-family: Solway;
-    text-align: center;
-    line-height: 30px;
-    border: 1px solid;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  font-size: 18px;
+  font-family: Solway;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid;
 }
 
 .good-rating {
-    color: rgb(30, 247, 128);
-    border-color: rgb(30, 247, 128);
-    box-shadow: 0px 0px 10px -3px rgb(30, 247, 128), 0px 0px 5px -2px rgb(30, 247, 128) inset;
-
+  color: #1ef780;
+  border-color: #1ef780;
+  box-shadow: 0px 0px 10px -3px #1ef780, 0px 0px 5px -2px #1ef780 inset;
 }
+
 .average-rating {
-    color: rgb(247, 233, 30);
-    border-color: rgb(247, 233, 30);
-    box-shadow: 0px 0px 10px -3px rgb(247, 233, 30), 0px 0px 5px -2px rgb(247, 233, 30) inset;
-
+  color: #f7e91e;
+  border-color: #f7e91e;
+  box-shadow: 0px 0px 10px -3px #f7e91e, 0px 0px 5px -2px #f7e91e inset;
 }
-.bad-rating {
-    color: rgb(255, 23, 23);
-    border-color: rgb(255, 23, 23);
-    box-shadow: 0px 0px 10px -3px rgb(255, 23, 23), 0px 0px 5px -2px rgb(255, 23, 23) inset;
 
+.bad-rating {
+  color: #ff1717;
+  border-color: #ff1717;
+  box-shadow: 0px 0px 10px -3px #ff1717, 0px 0px 5px -2px #ff1717 inset;
 }
 
 .trailer {
-    font-size: 20px;
-    text-decoration: none;
-    color: rgb(var(--body-text));
-    transition: color .2s;
+  font-size: 20px;
+  text-decoration: none;
+  color: #909191;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 .trailer:hover {
-    color: rgb(var(--title-text));
+  color: #ffb53b;
 }
 
 .title {
-    font-family: Quicksand;
-    color: rgb(var(--title-text));
+  font-family: Quicksand;
+  color: #ffb53b;
 }
 
 .description {
-    text-align: justify;
+  text-align: justify;
 }
+

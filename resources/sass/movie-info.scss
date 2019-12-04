@@ -1,0 +1,121 @@
+@import "./colours.scss";
+
+#background {
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+#content {
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#movie {
+    display: flex;
+    flex-direction: row;
+    background: $bg-card;
+    line-height: 0;
+    max-width: 1200px;
+    border-radius: .25rem;
+    overflow: hidden;
+}
+
+#left {
+    width: 50%;
+
+    img {
+        width: 100%;
+    }
+}
+
+#right {
+    line-height: normal;
+    width: 100%;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $body-text;
+    padding: 2rem;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#top div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .25rem;
+}
+
+.name {
+    color: $title-text;
+    font-size: 28px;
+    font-family: Quicksand;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.rating {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: Solway;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid;
+}
+
+.good-rating {
+    color: rgb(30, 247, 128);
+    border-color: rgb(30, 247, 128);
+    box-shadow: 0px 0px 10px -3px rgb(30, 247, 128), 0px 0px 5px -2px rgb(30, 247, 128) inset;
+
+}
+.average-rating {
+    color: rgb(247, 233, 30);
+    border-color: rgb(247, 233, 30);
+    box-shadow: 0px 0px 10px -3px rgb(247, 233, 30), 0px 0px 5px -2px rgb(247, 233, 30) inset;
+
+}
+.bad-rating {
+    color: rgb(255, 23, 23);
+    border-color: rgb(255, 23, 23);
+    box-shadow: 0px 0px 10px -3px rgb(255, 23, 23), 0px 0px 5px -2px rgb(255, 23, 23) inset;
+
+}
+
+.trailer {
+    font-size: 20px;
+    text-decoration: none;
+    color: $body-text;
+    transition: color .2s;
+    &:hover {
+        color: $title-text;
+    }
+}
+
+.title {
+    font-family: Quicksand;
+    color: $title-text;
+}
+
+.description {
+    text-align: justify;
+}
