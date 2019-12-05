@@ -11,7 +11,6 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.sass('resources/sass/default.scss', 'public/css')
-    .sass('resources/sass/index.scss', 'public/css')
-    .sass('resources/sass/create.scss', 'public/css')
-    .sass('resources/sass/movie-info.scss', 'public/css');
+mix.js('resources/js/app.js', 'public/js')
+   .sass('resources/sass/app.scss', 'public/css')
+   .sass('resources/sass/create.scss', 'public/css');

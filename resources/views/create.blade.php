@@ -2,7 +2,7 @@
 @section('title', 'Add a Movie')
 @section('theme')
     @parent
-    <link rel="stylesheet" href="../css/create.css">
+    <link rel="stylesheet" href="/css/create.css">
 @endsection
 
 @section ('background')
@@ -38,9 +38,9 @@
                 <div>
                     <label for="rating">Movie Rating</label>
                     <div>
-                        <div class="btn material-icons" @click="ratingValue--">remove</div>
-                        <input id="movieRating" type="number" v-model="ratingValue" min="0" max="10" step="0.1" name="rating">
-                        <div class="btn material-icons" @click="ratingValue++">add</div>
+                        <div class="btn material-icons" @click="decreaseValue">remove</div>
+                        <input id="movieRating" type="number" v-model="ratingValue" name="rating">
+                        <div class="btn material-icons" @click="increaseValue">add</div>
                     </div>
                     
                 </div>

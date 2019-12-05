@@ -1,6 +1,5 @@
 {
-    "/css/default.css": "/css/default.css",
-    "/css/index.css": "/css/index.css",
-    "/css/create.css": "/css/create.css",
-    "/css/movie-info.css": "/css/movie-info.css"
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/create.css": "/css/create.css"
 }

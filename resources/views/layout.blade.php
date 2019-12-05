@@ -15,7 +15,7 @@
             <link rel="stylesheet" href="../css/colours.css">
             <link rel="stylesheet" href="../css/default.css">
         @show
-
+        <link rel="stylesheet" href="/css/app.css">
         <style>
         .slide-fade-enter-active {
             transition: all .3s ease;
@@ -52,6 +52,16 @@
                     return {
                         show: false,
                         ratingValue: 0
+                    }
+                },
+                methods: {
+                    increaseValue() {
+                        if (this.ratingValue < 10)
+                            this.ratingValue++;
+                    },
+                    decreaseValue() {
+                        if (this.ratingValue > 0)
+                            this.ratingValue--;
                     }
                 },
                 mounted () {

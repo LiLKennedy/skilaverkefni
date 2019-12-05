@@ -83,7 +83,8 @@
             cursor: pointer;
             box-sizing: border-box;
             transition: border-color .2s;
-
+            user-select: none;
+            
             &:hover {
                 border-color: #ffb53b;
             }

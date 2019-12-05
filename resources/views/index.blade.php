@@ -10,11 +10,17 @@
 @endsection
 
 @section ('content')
+    <div id="header">
+        <div id="logo" style="font-size:64px; color: #ffb53b">UMDB</div>
+        <div id="user">login </div>
+    </div>
     <div id="movies">
+        
+        @auth
         <div class="movie-container">
             <a href="movies/create" id="addMovieCard" class="material-icons">add_circle_outline <div class="tooltip">ADD A MOVIE</div></a>
-            
         </div>
+        @endauth
         @foreach ($movies as $movie)
         <div class="movie-container">
             <div class="movie" style="background-image: url('../{{ $movie->poster }}');">
