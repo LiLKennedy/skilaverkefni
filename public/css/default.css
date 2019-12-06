@@ -1,13 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Solway:400,700&display=swap);@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap);html {
   background: #0e1014;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
-  overflow-y: visible;
 }
 
 #background {
@@ -32,21 +32,6 @@ body {
   font-family: Quicksand, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.goback {
-  font-size: 2.5rem;
-  color: #ffb53b;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  text-decoration: none;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-}
-
-.goback:hover {
-  color: rgba(255, 181, 59, 0.5);
-}
-
 #addMovieCard .tooltip {
   font-family: Quicksand;
   background: #1a1c1f;
@@ -55,7 +40,7 @@ body {
   text-shadow: none;
   border-radius: 0.25rem;
   font-size: 16px;
-  top: 33%;
+  top: 11%;
   opacity: 0;
   padding: 10px;
   position: absolute;
@@ -65,7 +50,7 @@ body {
 
 #addMovieCard .tooltip:before,
 #addMovieCard .tooltip:after {
-  bottom: 100%;
+  top: 100%;
   left: 50%;
   border: solid transparent;
   content: " ";
@@ -77,14 +62,14 @@ body {
 
 #addMovieCard .tooltip:after {
   border-color: rgba(136, 183, 213, 0);
-  border-bottom-color: #1a1c1f;
+  border-top-color: #1a1c1f;
   border-width: 15px;
   margin-left: -15px;
 }
 
 #addMovieCard .tooltip:before {
   border-color: rgba(194, 225, 245, 0);
-  border-bottom-color: #ffb53b;
+  border-top-color: #ffb53b;
   border-width: 17px;
   margin-left: -17px;
 }

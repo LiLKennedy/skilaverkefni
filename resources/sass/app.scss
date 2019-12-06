@@ -1,6 +1,40 @@
+@import "colours";
 
+#header {
+    z-index: 3434343;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: Quicksand;
+    padding: 2rem;
+    box-sizing: border-box;
 
-// @import "index";
+    .spacer {
+        width: 200px;
+    }
 
-// @import "create";
+    .goback,
+    #user {
+        font-size: 24px;
+        color: $body-text;
+        text-decoration: none;
+        transition: color .2s;
+        width: 200px;
+        text-align: center;
 
+        &:hover {
+            color: $title-text;
+        }
+    }
+
+    .goback {
+        font-size: 3rem;
+    }
+
+    #logo {
+        font-size: 64px; 
+        color: $title-text;
+    }
+    
+}

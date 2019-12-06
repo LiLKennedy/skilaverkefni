@@ -23,6 +23,18 @@
   background-color: rgba(41, 43, 47, 0.75);
 }
 
+#header {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
 #movies {
   display: -webkit-box;
   display: flex;

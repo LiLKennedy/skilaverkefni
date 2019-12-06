@@ -5,13 +5,11 @@
     <link rel="stylesheet" href="/css/create.css">
 @endsection
 
-@section ('background')
-    @parent
+@section ('header-back-button')
+    <a href="/" class="goback material-icons">keyboard_backspace</a>
 @endsection
 
 @section ('content')
-    <a href="/" class="goback material-icons">keyboard_backspace</a>
-        
     <form method="POST" action="/" id="create" enctype="multipart/form-data">
         @csrf
         <div class="header">Add a Movie</div>

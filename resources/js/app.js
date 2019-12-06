@@ -29,4 +29,23 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    data() {
+        return {
+            show: false,
+            ratingValue: 0
+        }
+    },
+    methods: {
+        increaseValue() {
+            if (this.ratingValue < 10)
+                this.ratingValue++;
+        },
+        decreaseValue() {
+            if (this.ratingValue > 0)
+                this.ratingValue--;
+        }
+    },
+    mounted () {
+        this.show = true
+    }
 });

@@ -2,18 +2,17 @@
 @section('title', $movie->name)
 @section('theme')
     @parent
-    <link rel="stylesheet" href="../css/movie-info.css">
+    <link rel="stylesheet" href="/css/movie-info.css">
 @endsection
 
-@section ('background')
-    <div id="background" style="background: linear-gradient(150deg, rgba(47, 47, 64, 1), rgba(14, 16, 20, 0.95), rgba(14, 16, 20, 1)), url('../{{ $movie->poster }}');"></div>
+@section ('header-back-button')
+    <a href="/" class="goback material-icons">keyboard_backspace</a>
 @endsection
 
 @section ('content')
-    <a href="/" class="goback material-icons">keyboard_backspace</a>
     <div id="movie">
         <div id="left">
-            <img src="../{{ $movie->poster }}" alt="Movie Poster">
+            <img src="/{{ $movie->poster }}" alt="Movie Poster">
         </div>
         <div id="right">
             <div id="info">
@@ -52,4 +51,8 @@
 
     <div></div>
     
+@endsection
+
+@section ('background')
+    <div id="background" style="background: linear-gradient(150deg, rgba(47, 47, 64, 1), rgba(14, 16, 20, 0.95), rgba(14, 16, 20, 1)), url('/{{ $movie->poster }}');"></div>
 @endsection

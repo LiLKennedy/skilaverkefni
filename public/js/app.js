@@ -49455,7 +49455,24 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  */
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  data: function data() {
+    return {
+      show: false,
+      ratingValue: 0
+    };
+  },
+  methods: {
+    increaseValue: function increaseValue() {
+      if (this.ratingValue < 10) this.ratingValue++;
+    },
+    decreaseValue: function decreaseValue() {
+      if (this.ratingValue > 0) this.ratingValue--;
+    }
+  },
+  mounted: function mounted() {
+    this.show = true;
+  }
 });
 
 /***/ }),
@@ -49596,16 +49613,52 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/default.scss":
+/*!*************************************!*\
+  !*** ./resources/sass/default.scss ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/index.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/index.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/movie-info.scss":
+/*!****************************************!*\
+  !*** ./resources/sass/movie-info.scss ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!******************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/create.scss ***!
-  \******************************************************************************************/
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/create.scss ./resources/sass/movie-info.scss ./resources/sass/index.scss ./resources/sass/default.scss ***!
+  \*************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\laravel\skilaverkefni\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\laravel\skilaverkefni\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\laravel\skilaverkefni\resources\sass\create.scss */"./resources/sass/create.scss");
+__webpack_require__(/*! C:\laravel\skilaverkefni\resources\sass\create.scss */"./resources/sass/create.scss");
+__webpack_require__(/*! C:\laravel\skilaverkefni\resources\sass\movie-info.scss */"./resources/sass/movie-info.scss");
+__webpack_require__(/*! C:\laravel\skilaverkefni\resources\sass\index.scss */"./resources/sass/index.scss");
+module.exports = __webpack_require__(/*! C:\laravel\skilaverkefni\resources\sass\default.scss */"./resources/sass/default.scss");
 
 
 /***/ })
