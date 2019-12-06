@@ -22,6 +22,7 @@
         transition: color .2s;
         width: 200px;
         text-align: center;
+        cursor: pointer;
 
         &:hover {
             color: $title-text;
@@ -35,6 +36,119 @@
     #logo {
         font-size: 64px; 
         color: $title-text;
+    }
+    
+}
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .modalbackground {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 11;
+    }
+}
+
+.modalcontent {
+    position: absolute;
+    z-index: 12;
+    background-color: $bg-card;
+    padding: 2rem;
+    border-radius: .25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Quicksand;
+    min-width: 400px;
+    form {
+        width: 100%;
+    }
+
+    .header {
+        color: $title-text;
+        font-size: 2rem;
+        padding: 2rem 0 4rem 0;
+        text-align: center;
+    }
+
+    .row.justify-content-center {
+        width: 100%;
+    }
+
+    label {
+        color: $title-text;
+    }
+
+    .form-control {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 2rem;
+        color: $body-text;
+        height: 40px;
+        margin-top: 10px;
+        padding: 0 .5rem;
+        font-size: 1rem;
+        background-color: $bg-card-sec;
+        border: 2px solid;
+        border-color: transparent;
+        outline: none;
+        transition: border-color .2s;
+        font-family: Quicksand;
+
+        &:hover,
+        &:focus {
+            border-color: $title-text;
+        }
+    }
+
+    .form-check {
+        display: flex;
+        align-items: center;
+    }
+
+    .btn {
+        margin-top: 5px;
+        font-size: 24px;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.25rem;
+        border: 2px solid transparent;
+        background: $title-text;
+        color: #4d3612;
+        transition: background-color 0.2s, color 0.2s;
+        cursor: pointer;
+        text-decoration: none;
+        width: 100%;
+        &:hover {
+            background: $title-text-but-darker;
+        }
+    }
+    .bottombtns {
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+        .btn-register,
+        .btn-forgotpass {
+            margin-top: 5px;
+            color: $body-text;
+            transition: color .2s;
+            font-size: 16px;
+            text-decoration: none;
+            &:hover {
+                color: $title-text;
+            }
+        }
     }
     
 }

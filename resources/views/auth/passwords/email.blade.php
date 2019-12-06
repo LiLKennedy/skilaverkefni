@@ -1,11 +1,17 @@
-@extends('layouts.app')
+@extends('layout')
+
+@section('title', 'Reset Password')
+
+@section ('header-back-button')
+    <a href="/" class="goback material-icons">keyboard_backspace</a>
+@endsection
 
 @section('content')
-<div class="container">
+<div class="modalcontent">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+                <div class="card-header header">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))

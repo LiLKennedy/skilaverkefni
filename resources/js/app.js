@@ -32,7 +32,8 @@ const app = new Vue({
     data() {
         return {
             show: false,
-            ratingValue: 0
+            ratingValue: 0,
+            showLogin: false
         }
     },
     methods: {

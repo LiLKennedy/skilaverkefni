@@ -25,6 +25,7 @@
   transition: color 0.2s;
   width: 200px;
   text-align: center;
+  cursor: pointer;
 }
 
 #header .goback:hover,
@@ -38,6 +39,138 @@
 
 #header #logo {
   font-size: 64px;
+  color: #ffb53b;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.modal .modalbackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 11;
+}
+
+.modalcontent {
+  position: absolute;
+  z-index: 12;
+  background-color: #292b2f;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  font-family: Quicksand;
+  min-width: 400px;
+}
+
+.modalcontent form {
+  width: 100%;
+}
+
+.modalcontent .header {
+  color: #ffb53b;
+  font-size: 2rem;
+  padding: 2rem 0 4rem 0;
+  text-align: center;
+}
+
+.modalcontent .row.justify-content-center {
+  width: 100%;
+}
+
+.modalcontent label {
+  color: #ffb53b;
+}
+
+.modalcontent .form-control {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+  color: #909191;
+  height: 40px;
+  margin-top: 10px;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  background-color: #1a1c1f;
+  border: 2px solid;
+  border-color: transparent;
+  outline: none;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+  font-family: Quicksand;
+}
+
+.modalcontent .form-control:hover,
+.modalcontent .form-control:focus {
+  border-color: #ffb53b;
+}
+
+.modalcontent .form-check {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.modalcontent .btn {
+  margin-top: 5px;
+  font-size: 24px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
+  background: #ffb53b;
+  color: #4d3612;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+}
+
+.modalcontent .btn:hover {
+  background: #d39531;
+}
+
+.modalcontent .bottombtns {
+  margin-top: 5px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+.modalcontent .bottombtns .btn-register,
+.modalcontent .bottombtns .btn-forgotpass {
+  margin-top: 5px;
+  color: #909191;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.modalcontent .bottombtns .btn-register:hover,
+.modalcontent .bottombtns .btn-forgotpass:hover {
   color: #ffb53b;
 }
 
